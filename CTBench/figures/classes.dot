@@ -1,0 +1,50 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"model_wrapper.ARoWModelWrapper" [color="black", fontcolor="black", label="{ARoWModelWrapper|LS_loss_fn\lreg_weight : property\l|get_ARoW_loss(inputs, adv_outputs, targets, model)\lget_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.BasicFunctionWrapper" [color="black", fontcolor="black", label="{BasicFunctionWrapper|attribute_list : property\lwrapper\l|broadcast_attributes()\l}", shape="record", style="solid"];
+"model_wrapper.BasicModelWrapper" [color="black", fontcolor="black", label="{BasicModelWrapper|BNs\largs\lcurrent_eps\lcurrent_eps : property\lcurrent_lr : property\ldata_max : property\ldata_min : property\ldevice\lfreeze_BN : property\lgrad_cleaner : property\lgrad_scaler : property\linput_dim : Tuple[int, ...]\lloss_fn : Callable\lmax_eps : property\lnet : Callable\lrobust_weight : property\lsummary_accu_stat : property\l|Get_Performance(x, y, use_model, return_output: bool)\lcombine_loss(nat_loss, robust_loss)\lcompute_model_stat(x, y, eps)\lcompute_nat_loss_and_set_BN(x, y)\lconvert_pred_to_margin(y: torch.Tensor, pred: torch.Tensor, rearrange_label: bool): torch.Tensor\lformat_return(loss, nat_loss, nat_accu, is_nat_accu, robust_loss, robust_accu, is_robust_accu)\lforward(x)\lget_robust_stat_from_bounds(lb, ub, x, y)\lget_robust_stat_from_input_noise(eps, x, y)\lgrad_postprocess()\lparam_postprocess()\l}", shape="record", style="solid"];
+"model_wrapper.BoxModelWrapper" [color="black", fontcolor="black", label="{BoxModelWrapper|relu_shrinkage : property\lstore_box_bounds : property\l|get_IBP_bounds(abs_net, input_lb, input_ub, y)\lget_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.CCIBPModelWrapper" [color="black", fontcolor="black", label="{CCIBPModelWrapper|\l|get_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.DeepPolyModelWrapper" [color="black", fontcolor="black", label="{DeepPolyModelWrapper|use_dp_box : property\l|get_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.EXPIBPModelWrapper" [color="black", fontcolor="black", label="{EXPIBPModelWrapper|\l|get_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.GradAccuFunctionWrapper" [color="black", fontcolor="black", label="{GradAccuFunctionWrapper|current_eps\ldisable_accumulation : property\lgrad_accu_batch : property\lnamed_grads : dict\l|compute_model_stat(x, y, eps)\l}", shape="record", style="solid"];
+"model_wrapper.MARTModelWrapper" [color="black", fontcolor="black", label="{MARTModelWrapper|reg_weight : property\l|get_MART_loss(inputs, adv_inputs, targets, model)\lget_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.MTLIBPModelWrapper" [color="black", fontcolor="black", label="{MTLIBPModelWrapper|ibp_coef : property\lnum_steps : property\lrestarts : property\l|get_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.MultiPGDModelWrapper" [color="black", fontcolor="black", label="{MultiPGDModelWrapper|\l|get_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.PGDModelWrapper" [color="black", fontcolor="black", label="{PGDModelWrapper|cache_advx : property\lcache_advy : property\lcurrent_advx : NoneType\lcurrent_advy : NoneType\lcurrent_eps\lenable_EDAC : property\lnum_steps : property\lrestarts : property\l|compute_model_stat(x, y, eps)\lget_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.SAMFunctionWrapper" [color="black", fontcolor="black", label="{SAMFunctionWrapper|current_eps\lrho : property\l|compute_model_stat(x, y, eps)\lparam_postprocess()\l}", shape="record", style="solid"];
+"model_wrapper.STAPSModelWrapper" [color="black", fontcolor="black", label="{STAPSModelWrapper|input_search_restarts : int\linput_search_steps : int\l|}", shape="record", style="solid"];
+"model_wrapper.SmallBoxModelWrapper" [color="black", fontcolor="black", label="{SmallBoxModelWrapper|cache_advx : property\lcache_advy : property\lcurrent_advx : NoneType\lcurrent_advy : NoneType\leps_shrinkage : property\linput_search_restarts : property\linput_search_steps : property\l|get_robust_stat_from_input_noise(eps, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.TAPSModelWrapper" [color="black", fontcolor="black", label="{TAPSModelWrapper|TAPS_grad_scale : property\ldisable_TAPS : property\llatent_search_restarts : property\llatent_search_steps : property\lnet_blocks_abs : property\lno_ibp_multiplier : property\lsoft_thre : property\l|get_TAPS_bounds(block, x, input_lb, input_ub, num_steps, restarts, y)\lget_robust_stat_from_bounds(lb, ub, x, y)\l}", shape="record", style="solid"];
+"model_wrapper.WeightSmoothFunctionWrapper" [color="black", fontcolor="black", label="{WeightSmoothFunctionWrapper|current_eps\lstd_scale : property\l|compute_model_stat(x, y, eps)\lparam_postprocess()\l}", shape="record", style="solid"];
+"model_wrapper._AdvBoundGradientLink" [color="black", fontcolor="black", label="{_AdvBoundGradientLink|\l|backward(ctx, grad_x)\lforward(ctx, lb, ub, x, c: float, tol: float)\l}", shape="record", style="solid"];
+"model_wrapper._EDACMixin" [color="black", fontcolor="black", label="{_EDACMixin|EDAC_optimizer\lEDAC_step_size : property\l|EDAC_step(lb, ub, x, y)\lregister_EDAC_hyperparam(optimizer, EDAC_step_size: float)\l}", shape="record", style="solid"];
+"model_wrapper._GradExpander" [color="black", fontcolor="black", label="{_GradExpander|\l|backward(ctx, grad_x)\lforward(ctx, x, alpha: float)\l}", shape="record", style="solid"];
+"model_wrapper._LabelSmoothingCrossEntropy" [color="black", fontcolor="black", label="{_LabelSmoothingCrossEntropy|confidence : property\lsmoothing : property\l|forward(x: torch.Tensor, target: torch.Tensor): torch.Tensor\l}", shape="record", style="solid"];
+"model_wrapper._MultiPGDMixin" [color="black", fontcolor="black", label="{_MultiPGDMixin|\l|}", shape="record", style="solid"];
+"model_wrapper._RectifiedLinearGradientLink" [color="black", fontcolor="black", label="{_RectifiedLinearGradientLink|\l|backward(ctx, grad_x)\l}", shape="record", style="solid"];
+"model_wrapper.ARoWModelWrapper" -> "model_wrapper.PGDModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.BasicFunctionWrapper" -> "model_wrapper.BasicModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.BoxModelWrapper" -> "model_wrapper.BasicModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.CCIBPModelWrapper" -> "model_wrapper.MTLIBPModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.DeepPolyModelWrapper" -> "model_wrapper.BasicModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.EXPIBPModelWrapper" -> "model_wrapper.MTLIBPModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.GradAccuFunctionWrapper" -> "model_wrapper.BasicFunctionWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.MARTModelWrapper" -> "model_wrapper.PGDModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.MTLIBPModelWrapper" -> "model_wrapper.BoxModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.MultiPGDModelWrapper" -> "model_wrapper.PGDModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.MultiPGDModelWrapper" -> "model_wrapper._MultiPGDMixin" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.PGDModelWrapper" -> "model_wrapper.BasicModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.PGDModelWrapper" -> "model_wrapper._EDACMixin" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.SAMFunctionWrapper" -> "model_wrapper.BasicFunctionWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.STAPSModelWrapper" -> "model_wrapper.SmallBoxModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.STAPSModelWrapper" -> "model_wrapper.TAPSModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.SmallBoxModelWrapper" -> "model_wrapper.BoxModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.TAPSModelWrapper" -> "model_wrapper.BoxModelWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.TAPSModelWrapper" -> "model_wrapper._MultiPGDMixin" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.WeightSmoothFunctionWrapper" -> "model_wrapper.BasicFunctionWrapper" [arrowhead="empty", arrowtail="none"];
+"model_wrapper._RectifiedLinearGradientLink" -> "model_wrapper._AdvBoundGradientLink" [arrowhead="empty", arrowtail="none"];
+"model_wrapper.BasicModelWrapper" -> "model_wrapper.BasicFunctionWrapper" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="wrapper", style="solid"];
+"model_wrapper._LabelSmoothingCrossEntropy" -> "model_wrapper.ARoWModelWrapper" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="LS_loss_fn", style="solid"];
+}
